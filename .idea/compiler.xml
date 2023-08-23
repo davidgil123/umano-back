@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="C:/gradle-8.1.1/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.28/a2ff5da8bcd8b1b26f36b806ced63213362c6dcc/lombok-1.18.28.jar" />
+        </processorPath>
+        <module name="MsUmanoProductsManagement.usecase.test" />
+        <module name="MsUmanoProductsManagement.model.main" />
+        <module name="MsUmanoProductsManagement.reactive-web.test" />
+        <module name="MsUmanoProductsManagement.app-service.test" />
+        <module name="MsUmanoProductsManagement.app-service.main" />
+        <module name="MsUmanoProductsManagement.model.test" />
+        <module name="MsUmanoProductsManagement.usecase.main" />
+        <module name="MsUmanoProductsManagement.reactive-web.main" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="17" />
+  </component>
+</project>
