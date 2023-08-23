@@ -1,13 +1,11 @@
 package co.com.umano.model.umanoproduct;
-import lombok.Builder;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @Builder(toBuilder = true)
+@RequiredArgsConstructor
 public class UmanoProduct {
     private String productId;
     private String name;
@@ -15,7 +13,7 @@ public class UmanoProduct {
     private String subCategory;
     private String description;
     private Integer price;
-    private Character size;
+    private String size;
     private Integer quantity;
     private String storeId;
 
