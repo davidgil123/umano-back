@@ -5,6 +5,8 @@ buildscript {
 		sonarVersion = '4.2.1.3168'
 		jacocoVersion = '0.8.10'
         lombokVersion = '1.18.28'
+        springContext = '6.0.8'
+        reactiveCommonsVersion = '0.1.0'
 	}
 }
 
