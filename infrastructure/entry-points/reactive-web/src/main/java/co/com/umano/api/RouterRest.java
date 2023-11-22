@@ -18,9 +18,10 @@ public class RouterRest {
     @Bean
     public RouterFunction<ServerResponse> routerFunction() {
         return route().POST(routes.getList(),handler::getAllProductsWithFilters).build()
-                .and(route().GET(routes.getListById(),handler::getProductById).build())
+                .and(route().POST(routes.getListById(),handler::getProductById).build())
                 .and(route().POST(routes.getCreate(),handler::createProduct).build())
                 .and(route().PATCH(routes.getUpdate(),handler::updateProduct).build())
-                .and(route().DELETE(routes.getDelete(),handler::deleteProduct).build());
+                .and(route().DELETE(routes.getDelete(),handler::deleteProduct).build())
+                .and(route().DELETE(routes.getDeleteAll(),handler::deleteAllProduct).build());
     }
 }

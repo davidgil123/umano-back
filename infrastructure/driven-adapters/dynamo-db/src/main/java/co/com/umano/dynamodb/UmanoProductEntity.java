@@ -1,8 +1,12 @@
 package co.com.umano.dynamodb;
 
+import lombok.Getter;
+import lombok.Setter;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.*;
 
 @DynamoDbBean
+@Setter
+@Getter
 public class UmanoProductEntity {
 
     private String productId;

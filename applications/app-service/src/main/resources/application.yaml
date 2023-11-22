@@ -27,11 +27,14 @@ cors:
 umano:
   paths:
     list: "/products"
-    list-by-id: "/product/id"
+    list-by-id: "/product/{id}"
     create: "/product"
     update: "/product"
-    delete: "/product/id"
+    delete: "/product/{id}"
+    deleteAll: "/products"
 aws:
   dynamodb:
-    endpoint: "http://localhost:8000"
+    endpoint: "http://localhost:8010"
     threads: "10"
+    region: "us-east-1"
+    table-name: umano-table-local

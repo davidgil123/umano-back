@@ -35,8 +35,11 @@ public abstract class TemplateAdapterOperations<E, K, V> {
         return Mono.fromFuture(customerTable.putItem(toEntity(model)));
     }
 
-    public Mono<E> getById(K id) {
-        return Mono.fromFuture(customerTable.getItem(Key.builder().partitionValue(AttributeValue.builder().s((String) id).build()).build())).map(this::toModel);
+    public Mono<E> getById(K storeId, K productId) {
+        return Mono.fromFuture(customerTable.getItem(Key.builder()
+                .partitionValue(AttributeValue.builder().s((String) storeId).build())
+                        .sortValue(AttributeValue.builder().s((String) productId).build())
+                .build())).map(this::toModel);
     }
 
     public Mono<E> delete(E model) {

@@ -1,16 +1,15 @@
-package co.com.umano.usecase.creatorumanoproduct;
+package co.com.umano.usecase.updaterumanoproduct;
 
 import co.com.umano.model.umanoproduct.UmanoProduct;
 import co.com.umano.model.umanoproduct.gateways.UmanoProductRepository;
 import lombok.RequiredArgsConstructor;
 import reactor.core.publisher.Mono;
 
-import java.util.List;
-
 @RequiredArgsConstructor
-public class CreatorUmanoProductUseCase {
+public class UpdaterUmanoProductUseCase {
     private final UmanoProductRepository umanoProductRepository;
-    public Mono<List<UmanoProduct>> createUmanoProduct(List<UmanoProduct> umanoProductList){
-        return umanoProductRepository.createProducts(umanoProductList);
+    public Mono<UmanoProduct> updateUmanoProduct(UmanoProduct umanoProduct){
+        return umanoProductRepository.updateProduct(umanoProduct)
+                .thenReturn(umanoProduct);
     }
 }

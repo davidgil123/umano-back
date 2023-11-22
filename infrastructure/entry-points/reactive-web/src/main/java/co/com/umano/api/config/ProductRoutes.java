@@ -15,4 +15,5 @@ public class ProductRoutes {
     private String create;
     private String update;
     private String delete;
+    private String deleteAll;
 }
